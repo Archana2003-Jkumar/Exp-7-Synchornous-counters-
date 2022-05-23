@@ -6,6 +6,7 @@ To implement 4 bit up and down counters and validate  functionality.
 ### SOFTWARE REQUIRED:  
  Quartus prime
 ### THEORY 
+ An up-counter counts events in increasing order. A down-counter counts stuff in the decreasing order. An up-down counter is a combination of an up-counter and a down-counter. It can count in both directions, increasing as well as decreasing.
 
 ## UP COUNTER 
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
@@ -41,16 +42,19 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
-
-
+# Procedure
+## Step1: 
+Through Quartus software do the programming .
+## Step2:
+Then by clicking the netlist viewer dothe gate level simulation.
+## Step3:
+Then do the timing diagram by making the clock high and reset as low and high.
 
 ### PROGRAM 
 ```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber: 
+Developed by: J.Archana priya 
+RegisterNumber:212221230007 
 ```
 # Down Counter:
 ```
@@ -92,16 +96,9 @@ endmodule
 ![67](./67.png)
 ![68](./68.png)
 
-
-
-
-
 ### TRUTH TABLE :
+![Table](./Table.png)
+![table2](./table2.png)
 
-
-
-
-
-
-
-### RESULTS 
+### RESULTS :
+The 4 bit up and down counters' functionality has been validated and implemented.
