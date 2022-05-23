@@ -1,7 +1,10 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement 4 bit up and down counters and validate  functionality.
+### HARDWARE REQUIRED:  
+ PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:  
+ Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -19,18 +22,11 @@ Binary count sequence, paying attention to patterns preceding the “toggling”
 
 Note that each bit in this four-bit sequence toggles when the bit before it (the bit having a lesser significance, or place-weight), toggles in a particular direction: from 1 to 0.
 
-
-
- 
- 
-
 Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
 
 The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
 
  
- 
-
 Four-bit “Up” Counter
 ![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
 
@@ -51,34 +47,57 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: 
-RegisterNumber:  
-*/
+RegisterNumber: 
+```
+# Down Counter:
+```
+module Exp0602 (input clk,input reset,output [0:3]counter);
+reg[0:3] counter_down;
+always @ (posedge clk or posedge reset)
+begin if(reset)
+counter_down <=4'd0;
+else 
+counter_down<=counter - 4'd1;
+end
+assign counter=counter_down; 
+endmodule 
 
-
-
-
-
-
+```
+# Up Counter:
+```
+module Exp00601(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up <=4'd0;
+else 
+counter_up <=counter_up + 4'd1;
+end
+assign counter = counter_up;
+endmodule 
+```
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
+![61](./61.png)
+![65](./65.png)
 
 ### TIMING DIGRAMS FOR COUNTER  
+![62](./62.png)
+![63](./63.png)
+![66](./66.png)
+![64](./64.png)
+![67](./67.png)
+![68](./68.png)
 
 
 
 
 
-### TRUTH TABLE 
+### TRUTH TABLE :
+
 
 
 
